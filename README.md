@@ -53,11 +53,11 @@ ACRIS_DATASET=mysql_personal docker-compose -f docker-compose.mysql.yml run --rm
 #### Direct DB access
 ```
 docker compose -f docker-compose.mysql.yml up
-docker compose exec -it db mysql -ppass
+docker compose -f docker-compose.mysql.yml exec -it db mysql -ppass
 ```
 ```
 docker compose -f docker-compose.psql.yml up
-docker compose exec -it db psql -U postgres
+docker compose -f docker-compose.psql.yml exec -it db psql -U postgres
 ```
 
 #### PhpMyAdmin access
